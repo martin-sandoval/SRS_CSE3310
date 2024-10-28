@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Login">
+
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.example.sra.Login"
+        android:label="[S1] Login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_Login_to_Home"
+            app:destination="@id/Home" />
+        <action
+            android:id="@+id/action_Login_to_Recovery"
+            app:destination="@id/Recovery" />
+        <action
+            android:id="@+id/action_Login_to_NewUserScreen"
+            app:destination="@id/NewUserScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.sra.Home"
+        android:label="[S2] App Functions"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_Home_to_Login"
+            app:destination="@id/Login" />
+        <action
+            android:id="@+id/action_Home_to_eventNotification"
+            app:destination="@id/eventNotification" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Recovery"
+        android:name="com.example.sra.Recovery"
+        android:label="[S3] Error"
+        tools:layout="@layout/fragment_recovery" >
+        <action
+            android:id="@+id/action_Recovery_to_Login"
+            app:destination="@id/Login" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewUserScreen"
+        android:name="com.example.sra.NewUserScreen"
+        android:label="[S3] New User"
+        tools:layout="@layout/new_user" >
+        <action
+            android:id="@+id/action_NewUserScreen_to_Login"
+            app:destination="@id/Login" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventNotification"
+        android:name="com.example.sra.EventNotification"
+        android:label="[S3] New User"
+        tools:layout="@layout/event_notification" >
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.sra.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+    </fragment>
+
+</navigation>
