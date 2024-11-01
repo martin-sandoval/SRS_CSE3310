@@ -9,7 +9,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.fragment.app.Fragment
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.ui.setupWithNavController
 import com.example.sra.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(),Login.OnBottomNavVisibilityListener {
 
         bottomNavigationView.setupWithNavController(navController)
 
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.Login || destination.id == R.id.Home ) {
                 supportActionBar?.setDisplayHomeAsUpEnabled(false)
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity(),Login.OnBottomNavVisibilityListener {
                     navController.navigate(R.id.Home)
                     true
                 }
-                R.id.transactions ->{navController.navigate(R.id.eventNotification)
+                R.id.notification ->{navController.navigate(R.id.eventNotification)
                     true
                 }
                 else -> false

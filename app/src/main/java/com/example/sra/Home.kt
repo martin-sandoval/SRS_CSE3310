@@ -11,9 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
+
 class Home : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

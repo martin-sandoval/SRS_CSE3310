@@ -8,6 +8,6 @@
         android:id="@+id/searchButton"
         android:title="Search" />
     <item
-        android:id="@+id/transactions"
-        android:title="Transactions" />
+        android:id="@+id/notification"
+        android:title="Notifications" />
 </menu>
